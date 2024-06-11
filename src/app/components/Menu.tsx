@@ -11,7 +11,7 @@ function Menu() {
     return (
         <div>
             <Image  src={"/menu.png"} width={25} height={25} alt="menu"  onClick={()=>setOpenMenu(prv=>!prv)}/>
-            {openMenu && <div className="absolute top-20 bg-black justify-center gap-5 flex flex-col items-center h-custom left-0 w-full text-white ">
+            {openMenu && <div className="absolute top-20 bg-black justify-center gap-5 flex flex-col items-center h-custom left-0 w-full text-black ">
                 <Link href={""}>Homepage</Link>
                 <Link href={""}>Shop</Link>
                 <Link href={""}>Deals</Link>

@@ -5,7 +5,7 @@ import React, { useState } from 'react'
 
 function Icon() {
     const [navModal, setNavModal] = useState(false)
-    const [cartModal, setCartModal] = useState(true)
+    const [cartModal, setCartModal] = useState(false)
 
 
     return (
@@ -22,7 +22,7 @@ function Icon() {
                 <Image onClick={() => setCartModal(prv => !prv)} className='relative cursor-pointer' src={"/cart.png"} width={25} height={25} alt='user' />
                 <div className='rounded-full h-6 w-6 flex items-center justify-center absolute top-1 bg-primery '>1</div>
                 {cartModal && <>
-                    <div className='flex flex-col gap-5 absolute w-max right-12 shadow-[0_3px_10px_rgb(0,0,0,0.2)] p-4'>
+                    <div className='flex flex-col gap-5 absolute w-max right-12 shadow-[0_3px_10px_rgb(0,0,0,0.2)] bg-white p-4'>
                         <h1>Cart Product</h1>
                         <div className='flex gap-8 items-center'>
                             <Image src={"/product_15.png"} className='rounded-md ' width={96} height={72} alt='cart_Item' />
