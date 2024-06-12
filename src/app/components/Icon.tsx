@@ -10,14 +10,17 @@ function Icon() {
 
     return (
         <div className='flex items-center gap-3'>
+            {/* user icon */}
             <div className='relative'>
                 <Image onClick={() => setNavModal(prv => !prv)} className='cursor-pointer' src={"/profile.png"} width={25} height={25} alt='user' />
                 {navModal && (
-                    <div className=' absolute shadow-[0_3px_10px_rgb(0,0,0,0.2)] p-2'>
+                    <div className=' absolute bg-white flex flex-col px-6 py-2 rounded-md shadow-[0_3px_10px_rgb(0,0,0,0.2)] p-2'>
                         <Link href={"profile"}>profile</Link>
+                        <Link href={"profile"}>login</Link>
                     </div>
                 )}
             </div>
+            {/* cart icon */}
             <div className=''>
                 <Image onClick={() => setCartModal(prv => !prv)} className='relative cursor-pointer' src={"/cart.png"} width={25} height={25} alt='user' />
                 <div className='rounded-full h-6 w-6 flex items-center justify-center absolute top-1 bg-primery '>1</div>
@@ -27,7 +30,6 @@ function Icon() {
                         <div className='flex gap-8 items-center'>
                             <Image src={"/product_15.png"} className='rounded-md ' width={96} height={72} alt='cart_Item' />
                             <div>
-                                {/* top */}
                                 <div className='flex justify-between items-center gap-8'>
                                     <h1>Product Name</h1>
                                     <span>$ 49</span>

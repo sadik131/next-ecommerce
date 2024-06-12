@@ -8,6 +8,7 @@ function SarchBar() {
     const router = useRouter()
     const QuerrySarch = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
+        console.log(query)
         if (query) {
             router.push(`/pages/list?name=${query}`)
         }

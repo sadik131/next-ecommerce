@@ -23,7 +23,12 @@ function Navbar() {
             <h1 className="text-2xl font-bold">Tube</h1>
           </Link>
         </div>
-        <div className="w-2/3 flex justify-between gap-4">
+        <div className="w-2/3 flex justify-between items-center gap-4">
+          <Link href={"/"}>Homepage</Link>
+          <Link href={""}>Shop</Link>
+          <Link href={""}>Deals</Link>
+          <Link href={""}>About</Link>
+          <Link href={""}>Contact</Link>
           <SarchBar />
           <Icon />
         </div>

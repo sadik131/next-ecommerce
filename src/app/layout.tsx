@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import { WixclinetContextProvider } from "./context/WixContext";
 import { Toaster } from "react-hot-toast";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -20,10 +21,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Navbar></Navbar>
-        {children}
-        <Toaster />
-        <Footer></Footer>
+        <WixclinetContextProvider>
+          <Navbar></Navbar>
+          {children}
+          <Toaster />
+          <Footer></Footer>
+        </WixclinetContextProvider>
       </body>
     </html>
   );
